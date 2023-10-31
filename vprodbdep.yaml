@@ -24,7 +24,7 @@ spec:
               name: vpro-db-data
           ports:
             - name: vprodb-port
-            - containerPort: 3306
+              containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
@@ -34,7 +34,7 @@ spec:
       nodeSelector:
         zone: us-east-1a
       volumes:
-        - name: vpro-db-data
+        - name: pro-db-data
           awsElasticBlockStore:
             volumeID: vol-077c820e917d7dc5b
             fsType: ext4
